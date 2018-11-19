@@ -1,0 +1,25 @@
+{
+  "name": "graphcms-data-migration",
+  "version": "1.0.0",
+  "description": "Simple utility for migrating data to a GraphCMS project",
+  "main": "index.js",
+  "scripts": {
+    "start": "node .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brandiqa/graphcsms-data-migration.git"
+  },
+  "keywords": [],
+  "author": "Michael Wanyoike",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/brandiqa/graphcsms-data-migration/issues"
+  },
+  "homepage": "https://github.com/brandiqa/graphcsms-data-migration#readme",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "csvtojson": "^2.0.8"
+  }
+}
