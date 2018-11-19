@@ -2,14 +2,27 @@
 
 ## Introduction
 
-Simple utility for migrating data to a GraphCMS project
+Simple utility for migrating data to a [GraphCMS](https://graphcms.com/) project database.
 
 ## How to Run
 
-Go to the folder data and update the `csv` files with your own data
+1. Go to the folder data and update the `csv` files with your own data
+2. Create a `.env` file and populate it with the following settings:
+
+```env
+ENDPOINT=<YOUR_API_ENDPOINT>
+TOKEN=<YOUR_TOKEN>
+```
+
+3. Install dependencies
 
 ```bash
 npm install
+```
+
+4. Run the script
+
+```bash
 npm start
 ```
 

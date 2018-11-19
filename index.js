@@ -27,8 +27,8 @@ const categoriesMutation = `
   }
 `
 
-// Import Data
-async function importData(file, mutation){
+// Upload Data to GraphCMS Project Database
+async function uploadData(file, mutation){
   const rows = await csv().fromFile(file);
   console.log(`Uploading ${rows.length} rows...`);
   rows.map(async row => {
@@ -55,5 +55,5 @@ async function importData(file, mutation){
   })
 }
 
-// Import Categories
-importData('./data/categories.csv', categoriesMutation);
+// Upload Categories
+uploadData('./data/categories.csv', categoriesMutation);
