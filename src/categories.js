@@ -18,7 +18,7 @@ const categoriesMutation = `
 // Upload Data to GraphCMS Project Database
 async function uploadData(file, mutation){
   const rows = await csv().fromFile(file);
-  console.log(`Uploading ${rows.length} rows...`);
+  console.log(`Uploading ${rows.length} categories...`);
   rows.map(async row => {
     const formattedObj = { ...row, status: 'PUBLISHED' }
     try{
