@@ -1,18 +1,6 @@
-require('dotenv').config();
+const { ENDPOINT, headers } = require('./config');
 const csv = require('csvtojson');
-const fetch = require('isomorphic-fetch')
-
-const { ENDPOINT, TOKEN } = process.env;
-
-if (!ENDPOINT || !TOKEN) {
-  console.error('Configure .env file and set ENDPOINT and TOKEN values.')
-  process.exit(1);
-}
-
-const headers = {
-  'Content-Type': 'application/json',
-  'Authorization': `Bearer ${TOKEN}`
-}
+const fetch = require('isomorphic-fetch');
 
 const categoriesMutation = `
   mutation CreateCategory( $name: String! ) {

@@ -4,7 +4,7 @@
   "description": "Simple utility for migrating data to a GraphCMS project",
   "main": "index.js",
   "scripts": {
-    "start": "node .",
+    "start": "node src/index",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
