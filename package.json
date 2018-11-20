@@ -5,6 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "node src/index",
+    "reset": "node src/reset",
+    "categories": "node src/categories",
+    "posts": "node src/posts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
