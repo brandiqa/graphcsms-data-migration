@@ -1,2 +1,9 @@
-title,content,slug,categories
-Food Post 1,Breeze through Thanksgiving by making this make ahead Instant Pot orange cranberry sauce.,food-post-1,Food|Featured
+title,slug,content,categories
+Food Post 1,food-post-1,Breeze through Thanksgiving by making this Instant Pot orange cranberry sauce,Food|Featured
+Food Post 2,food-post-2,This is my second food post,Food
+Food Post 3,food-post-3,This is my last and final food post,Food
+Fashion Post 1,fashion-post-1,This is truly my very first fashion post,Fashion|Featured
+Fashion Post 2,fashion-post-2,This is my second fashion post,Fashion
+Fashion Post 3,fashion-post-3,This is my last and final fashion post,Fashion
+Beauty Post 1,Beauty-post-1,This is truly my very first Beauty post,Beauty|Featured
+Beauty Post 2,Beauty-post-2,This is my second beauty post,Beauty
