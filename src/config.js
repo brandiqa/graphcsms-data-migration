@@ -18,6 +18,8 @@ const readHeaders = {
 
 module.exports = {
   ENDPOINT,
+  READ_TOKEN,
+  WRITE_TOKEN,
   headers,
   readHeaders
 }

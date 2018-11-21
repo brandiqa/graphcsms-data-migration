@@ -35,10 +35,11 @@ async function uploadData(file, mutation){
       const body = await response.json()
       const data = await body.data
 
-      console.log('Uploaded', data)
+      console.log('Uploaded', data);
       return
     } catch (error) {
-      console.log("Error!", error)
+      console.log("Error!", error);
+      process.exit(1);
     }
   })
 }
