@@ -14,6 +14,8 @@ ENDPOINT=<YOUR_API_ENDPOINT>
 TOKEN=<YOUR_TOKEN>
 ```
 
+For the Token, create a new one if you don't have from your [GraphCMS](https://app.graphcms.com) dashboard(settings page). For permission, make sure to set it as `OPEN` to allow for both READ and WRITE operations. You'll find your `ENDPOINT` on the same page too,
+
 3. Install dependencies
 
 ```bash
@@ -22,9 +24,20 @@ npm install
 
 4. Run the script
 
+After you have supplied your data in the `data/*csv` files, execute the following commands in order:
+
 ```bash
-npm start
+npm run categories
+npm run posts
 ```
+
+If you wish to clear out your database contents, you can execute the following command:
+
+```bash
+npm run reset
+```
+
+This will clear out content for Categories, Posts and Comments.
 
 ## LICENSE
 
