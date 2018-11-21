@@ -1,4 +1,4 @@
-const { ENDPOINT, readHeaders, headers} = require('./config');
+const { ENDPOINT, headers} = require('./config');
 const csv = require('csvtojson');
 const fetch = require('isomorphic-fetch');
 
@@ -14,7 +14,7 @@ const categoriesQuery= `{
 async function fetchCategories() {
   try {
     const response = await fetch(ENDPOINT, {
-      headers: readHeaders,
+      headers: headers,
       method: 'POST',
       body: JSON.stringify({
         query: categoriesQuery

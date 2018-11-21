@@ -1,25 +1,18 @@
 require('dotenv').config();
-const { ENDPOINT, WRITE_TOKEN, READ_TOKEN } = process.env;
+const { ENDPOINT, TOKEN } = process.env;
 
-if (!ENDPOINT || !WRITE_TOKEN) {
+if (!ENDPOINT || !TOKEN) {
   console.error('ERROR: Failed to load ENDPOINT and TOKEN values from .env file.')
   process.exit(1);
 }
 
 const headers = {
   'Content-Type': 'application/json',
-  'Authorization': `Bearer ${WRITE_TOKEN}`
-}
-
-const readHeaders = {
-  'Content-Type': 'application/json',
-  'Authorization': `Bearer ${READ_TOKEN}`
+  'Authorization': `Bearer ${TOKEN}`
 }
 
 module.exports = {
   ENDPOINT,
-  READ_TOKEN,
-  WRITE_TOKEN,
-  headers,
-  readHeaders
+  TOKEN,
+  headers
 }
