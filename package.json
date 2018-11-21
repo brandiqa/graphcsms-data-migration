@@ -4,7 +4,6 @@
   "description": "Simple utility for migrating data to a GraphCMS project",
   "main": "index.js",
   "scripts": {
-    "start": "node src/index",
     "reset": "node src/reset",
     "categories": "node src/categories",
     "posts": "node src/posts",

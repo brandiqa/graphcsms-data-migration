@@ -16,8 +16,8 @@ const categoriesMutation = `
 `
 
 // Upload Data to GraphCMS Project Database
-async function uploadData(file, mutation){
-  const rows = await csv().fromFile(file);
+async function uploadCategories(){
+  const rows = await csv().fromFile('./data/categories.csv');
   console.log(`Uploading ${rows.length} categories...`);
   rows.map(async row => {
     const formattedObj = { ...row, status: 'PUBLISHED' }
@@ -26,7 +26,7 @@ async function uploadData(file, mutation){
         headers,
         method: 'POST',
         body: JSON.stringify({
-          query: mutation,
+          query: categoriesMutation,
           variables: formattedObj
         })
       });
@@ -36,13 +36,17 @@ async function uploadData(file, mutation){
       const data = await body.data
 
       console.log('Uploaded', data);
-      return
+      return;
     } catch (error) {
       console.log("Error!", error);
       process.exit(1);
     }
   })
+  return true;
 }
 
-// Upload Categories
-uploadData('./data/categories.csv', categoriesMutation);
+uploadCategories();
+
+module.exports = {
+  uploadCategories
+}

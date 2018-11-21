@@ -53,9 +53,10 @@ function getCategoryByName(name) {
   return categories.find(category => (category.name === name))
 }
 
-async function createPosts() {
+async function uploadPosts() {
   categories = await fetchCategories();
   const rows = await csv().fromFile('./data/posts.csv');
+  console.log(`Uploading ${rows.length} posts...`);
   rows.map(async row => {
     const rowCats = row.categories.split("|")
     const formattedCats = rowCats.map(cat => {
@@ -81,7 +82,7 @@ async function createPosts() {
       const data = await body.data
 
       console.log('Uploaded', data);
-      return
+      return data;
     } catch (error) {
       console.log("Error!", error);
       process.exit(1);
@@ -89,4 +90,8 @@ async function createPosts() {
   })
 }
 
-createPosts();
+uploadPosts();
+
+module.exports = {
+  uploadPosts
+}
